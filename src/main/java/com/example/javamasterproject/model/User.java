@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-//import javax.validation.constraints.Email;
 
 @Data
 @Entity(name = "User")

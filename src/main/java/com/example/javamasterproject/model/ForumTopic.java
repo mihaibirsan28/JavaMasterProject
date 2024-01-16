@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 import lombok.Data;
-import org.antlr.v4.runtime.misc.NotNull;
 
 @Data
 @Entity(name = "ForumTopic")

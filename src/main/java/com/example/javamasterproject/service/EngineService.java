@@ -63,18 +63,9 @@ public class EngineService {
         Engine engine = engineMapper.mapToEngine(engineDTO);
 //        Optional<Engine> engineOptional = engineRepository.findById(id);
         engineRepository.save(engine);
+
         return engine;
-//        if (engineOptional.isPresent()) {
-//            Engine existingEngine = engineOptional.get();
-//            existingEngine.setSize(engine.getSize());
-//            existingEngine.setFuel(engine.getFuel());
-//            existingEngine.setNumberOfCylindres(engine.getNumberOfCylindres());
-//            existingEngine.setCode(existingEngine.getCode());
-//            return engineRepository.save(existingEngine);
-//        }
-//        else {
-//            throw new RuntimeException("Engine not found");
-//        }
+
     }
 
     public void deleteEngine(String id) {

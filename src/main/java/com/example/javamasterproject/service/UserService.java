@@ -22,6 +22,7 @@ public class UserService {
 
     public String createUser(UserDTO userDTO) {
         User user = userMapper.mapToUser(userDTO);
+
         userRepository.save(user);
         return user.getId();
     }
