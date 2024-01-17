@@ -48,7 +48,7 @@ public class EngineServiceTest {
         String engineId = engineService.createEngine(engineDTO);
 
         assertNotNull(engineId, "Engine ID should not be null");
-        assertEquals(expectedEngineId, engineId, "Engine ID should match"); // Optionally, check if the returned engineId matches the expected value
+        assertEquals(expectedEngineId, engineId, "Engine ID should match");
 
         verify(engineMapper, times(1)).mapToEngine(engineDTO);
         verify(engineRepository, times(1)).save(expectedEngine);

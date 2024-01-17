@@ -51,7 +51,7 @@ public class UserServiceTest {
         String userId = userService.createUser(userDTO);
 
         assertNotNull(userId, "User ID should not be null");
-        assertEquals(expectedUserId, userId, "User ID should match"); // Optionally, check if the returned userId matches the expected value
+        assertEquals(expectedUserId, userId, "User ID should match");
 
         verify(userMapper, times(1)).mapToUser(userDTO);
         verify(userRepository, times(1)).save(expectedUser);
