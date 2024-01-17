@@ -1,3 +1,4 @@
+```md
 #Java Project - IS Master
 
 ##10 business requirements:
@@ -19,4 +20,4 @@
 -> Adaugarea si gestionarea de postari
 -> Adaugarea si gestionarea de cometarii din postari
 
-
+```
