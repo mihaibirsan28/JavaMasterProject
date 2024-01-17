@@ -33,31 +33,23 @@ public class EngineServiceTest {
 
     @Test
     void createEngine() {
-        // Given
-        EngineDTO engineDTO = new EngineDTO(); // Create your DTO object here
+        EngineDTO engineDTO = new EngineDTO();
         Engine expectedEngine = new Engine();
         String expectedEngineId = "123";
 
-        // Mock the behavior of the dependencies
-        // Mock the behavior of the dependencies
         when(engineMapper.mapToEngine(engineDTO)).thenReturn(expectedEngine);
 
-        // Ensure that the save operation returns a non-null value
         when(engineRepository.save(any(Engine.class))).thenAnswer(invocation -> {
             Engine savedEngine = invocation.getArgument(0);
-            // You may want to set an ID on the saved engine here if it's null
             savedEngine.setId(expectedEngineId);
             return savedEngine;
         });
 
-        // When
         String engineId = engineService.createEngine(engineDTO);
 
-        // Then
         assertNotNull(engineId, "Engine ID should not be null");
         assertEquals(expectedEngineId, engineId, "Engine ID should match"); // Optionally, check if the returned engineId matches the expected value
 
-        // Verify that the methods were called with the expected arguments
         verify(engineMapper, times(1)).mapToEngine(engineDTO);
         verify(engineRepository, times(1)).save(expectedEngine);
     }
@@ -115,7 +107,7 @@ public class EngineServiceTest {
 
     @Test
     public void testUpdateEngine() {
-        // Arrange
+
         EngineMapper engineMapper = mock(EngineMapper.class);
         EngineRepository engineRepository = mock(EngineRepository.class);
 
@@ -127,14 +119,11 @@ public class EngineServiceTest {
         Engine mappedEngine = new Engine(/* set mapped engine properties */);
         when(engineMapper.mapToEngine(engineDTO)).thenReturn(mappedEngine);
 
-        // Act
         Engine result = engineService.updateEngine(engineId, engineDTO);
 
-        // Assert
         assertNotNull(result);
         assertEquals(mappedEngine, result);
 
-        // Verify that the save method was called with the mapped engine
         verify(engineRepository, times(1)).save(mappedEngine);
     }
     @Test
