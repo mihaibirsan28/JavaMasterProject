@@ -1,7 +1,7 @@
 ```md
-#Java Project - IS Master
+# Java Project - IS Master
 
-##10 business requirements:
+## 10 business requirements:
 -> Autentificare si autorizare
 -> Gestionarea pieselor auto
 -> Publicarea anunturilor pentru vanzarea de piese auto
@@ -13,7 +13,7 @@
 -> Adaugarea comentariilor intr-o postare
 -> Gestionarea unui comentariu
 
-##5 main features:
+## 5 main features:
 -> Autentificarea si inregistrarea in aplicatie
 -> Adaugarea si gestionarea de anunturi 
 -> Adaugarea si gestionarea de topic-uri
