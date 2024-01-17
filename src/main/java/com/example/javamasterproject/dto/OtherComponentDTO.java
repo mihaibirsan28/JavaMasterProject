@@ -1,5 +1,7 @@
 package com.example.javamasterproject.dto;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Setter
@@ -10,17 +12,25 @@ import lombok.*;
 @EqualsAndHashCode
 @ToString
 public class OtherComponentDTO {
+    @NotEmpty
     private String id;
+    @NotEmpty
     private String userId;
-
+    @NotEmpty
     private String name;
+    @NotEmpty
     private String description;
+    @NotEmpty
+    @Size(min = 0)
     private Integer price;
-
     private String photos;
+    @NotEmpty
     private String compatibility;
+    @NotEmpty
     private String condition;
+    @NotEmpty
     private Integer mileage;
+    @NotEmpty
     private String type;
 
 }
